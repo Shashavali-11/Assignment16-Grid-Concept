@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1</title>
+    <style>
+      .parent {
+        background-color: black;
+        height: 400px;
+        width: 840px;
+
+        display: grid;
+
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr 2fr;
+
+        margin: 15px;
+        padding: 20px;
+        
+      }
+
+      .p1 {
+        background-color: grey;
+        justify-content: center;
+
+        height: 100px;
+        width: 250px;
+
+        display: grid;
+
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        margin: 5px;
+        padding: 5px;
+
+        gap: 3px;
+      }
+
+      .b11 {
+        background-color: orangered;
+      }
+      .b12 {
+        background-color: rgb(239, 100, 35);
+      }
+      .b13 {
+        background-color: rgb(255, 145, 0);
+      }
+      .b14 {
+        background-color: rgb(1, 52, 19);
+      }
+      .b15 {
+        background-color: rgb(10, 117, 37);
+      }
+      .b16 {
+        background-color: rgb(24, 167, 24);
+      }
+
+      .p2 {
+        
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+
+        margin: 5px;
+        padding: 5px;
+
+        gap: 3px;
+      }
+      .b21 {
+        background-color: orangered;
+        grid-column: 1/3;
+      }
+      .b22 {
+        background-color: rgb(255, 98, 0);
+        grid-row: 1/4;
+        grid-column: 3/3;
+      }
+      .b23 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b24 {
+        background-color: rgb(24, 162, 107);
+      }
+
+      .p3 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 4fr 2fr;
+
+        margin: 5px;
+        padding: 5px;
+
+
+        gap: 3px;
+      }
+
+      .b31 {
+        background-color: rgb(255, 98, 0);
+        grid-column: 1/4;
+      }
+      .b32 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b33 {
+        background-color: orangered;
+        grid-column: 2/4;
+      }
+      .b34 {
+        background-color: rgb(24, 162, 107);
+        grid-column: 1/4;
+      }
+
+      .p4 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-rows: 2fr 3fr 1fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+
+        margin: 5px;
+        padding: 5px;
+
+        gap: 3px;
+      }
+
+      .b41 {
+        background-color: rgb(255, 98, 0);
+        grid-column: 1/3;
+      }
+      .b42 {
+        background-color: orangered;
+        grid-column: 3/5;
+      }
+      .b43 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b44 {
+        background-color: rgb(24, 162, 107);
+        grid-column: 2/5;
+      }
+      .b45 {
+        background-color: orangered;
+        grid-column: 1/5;
+      }
+
+      .p5 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+
+        margin: 5px;
+        padding: 5px;
+
+
+        gap: 3px;
+      }
+      .b51 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b52 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b53 {
+        background-color: rgb(24, 162, 107);
+      }
+      .b54 {
+        background-color: orangered;
+      }
+      .b55 {
+        background-color: rgb(24, 162, 107);
+      }
+      .b56 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b57 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b58 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b59 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b510 {
+        background-color: rgb(24, 162, 107);
+      }
+      .b511 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b512 {
+        background-color: orangered;
+      }
+      .b513 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b514 {
+        background-color: orangered;
+      }
+      .b515 {
+        background-color: rgb(24, 162, 107);
+      }
+      .b516 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b517 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b518 {
+        background-color: rgb(24, 162, 107);
+      }
+
+      .p6 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+
+        margin: 5px;
+        padding: 5px;
+
+        gap: 3px;
+      }
+      .b61 {
+        background-color: orangered;
+        grid-column: 1/3;
+      }
+      .b62 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b63 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b64 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b65 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b66 {
+        background-color: rgb(24, 162, 107);
+      }
+      .b67 {
+        background-color: rgb(255, 98, 0);
+        grid-row: 3/5;
+        grid-column: 1/3;
+      }
+      .b68 {
+        background-color: rgb(24, 162, 107);
+        grid-row: 3/4;
+      }
+      .b69 {
+        background-color: orangered;
+        grid-row: 3/4;
+      }
+      .b610 {
+        background-color: rgb(6, 109, 67);
+        grid-row: 4/5;
+      }
+      .b611 {
+        background-color: rgb(24, 162, 107);
+        grid-row: 5/6;
+        grid-column: 1/4;
+      }
+      .b612 {
+        background-color: rgb(255, 98, 0);
+        grid-row: 5/6;
+      }
+
+      .p7 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-rows: 3fr 3fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+
+        margin: 5px;
+        padding: 5px;
+
+        gap: 3px;
+      }
+      .b71 {
+        background-color: rgb(255, 98, 0);
+        grid-column: 1/3;
+      }
+      .b72 {
+        background-color: aqua;
+        grid-column: 3/5;
+      }
+      .b73 {
+        background-color: orangered;
+        grid-row: 2/4;
+        grid-column: 1/3;
+      }
+      .b74 {
+        background-color: blue;
+        grid-row: 2/4;
+        grid-column: 3/5;
+        display: grid;
+        padding: 3px;
+        gap: 3px;
+
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+      }
+      .b701 {
+        background-color: aqua;
+        grid-column: 1/3;
+      }
+      .b702 {
+        background-color: rgb(20, 153, 100);
+      }
+      .b703 {
+        background-color: rgb(255, 98, 0);
+      }
+
+      .p8 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-rows: 3fr 3fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+
+        margin: 5px;
+        padding: 5px;
+
+
+        gap: 3px;
+      }
+      .b81 {
+        background-color: orangered;
+      }
+      .b82 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b83 {
+        background-color: aqua;
+      }
+      .b84 {
+        background-color: rgb(20, 153, 100);
+      }
+      .b85 {
+        background-color: rgb(6, 109, 67);
+      }
+      .b86 {
+        background-color: rgb(255, 98, 0);
+      }
+      .b87 {
+        background-color: orangered;
+      }
+      .b88 {
+        background-color: rgb(255, 98, 0);
+        grid-column: 3/6;
+      }
+      .b89 {
+        background-color: aqua;
+        grid-column: 1/6;
+      }
+
+      .p9 {
+        display: grid;
+        height: 100px;
+        width: 250px;
+        background-color: grey;
+
+        grid-template-rows: 3fr 3fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr;
+
+        margin: 5px;
+        padding: 5px;
+
+        gap: 3px;
+      }
+
+      .b91 {
+        background-color: rgb(255, 98, 0);
+        grid-column: 1/4;
+      }
+      .b92 {
+        background-color: rgb(6, 109, 67);
+        grid-row: 2/4;
+      }
+      .b93 {
+        background-color: aqua;
+        grid-column: 2/4;
+      }
+      .b94 {
+        background-color: orangered;
+      }
+      .b95 {
+        background-color: rgb(255, 98, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="p1">
+        <div class="box1 b11"></div>
+        <div class="box1 b12"></div>
+        <div class="box1 b13"></div>
+        <div class="box1 b14"></div>
+        <div class="box1 b15"></div>
+        <div class="box1 b16"></div>
+      </div>
+
+      <div class="p2">
+        <div class="box2 b21"></div>
+        <div class="box2 b22"></div>
+        <div class="box2 b23"></div>
+        <div class="box2 b24"></div>
+      </div>
+
+      <div class="p3">
+        <div class="box3 b31"></div>
+        <div class="box3 b32"></div>
+        <div class="box3 b33"></div>
+        <div class="box3 b34"></div>
+      </div>
+
+      <div class="p4">
+        <div class="box4 b41"></div>
+        <div class="box4 b42"></div>
+        <div class="box4 b43"></div>
+        <div class="box4 b44"></div>
+        <div class="box4 b45"></div>
+      </div>
+
+      <div class="p5">
+        <div class="box5 b51"></div>
+        <div class="box5 b52"></div>
+        <div class="box5 b53"></div>
+        <div class="box5 b54"></div>
+        <div class="box5 b55"></div>
+        <div class="box5 b56"></div>
+        <div class="box5 b57"></div>
+        <div class="box5 b58"></div>
+        <div class="box5 b59"></div>
+        <div class="box5 b510"></div>
+        <div class="box5 b511"></div>
+        <div class="box5 b512"></div>
+        <div class="box5 b513"></div>
+        <div class="box5 b514"></div>
+        <div class="box5 b515"></div>
+        <div class="box5 b516"></div>
+        <div class="box5 b517"></div>
+        <div class="box5 b518"></div>
+      </div>
+
+      <div class="p6">
+        <div class="box6 b61"></div>
+        <div class="box6 b62"></div>
+        <div class="box6 b63"></div>
+        <div class="box6 b64"></div>
+        <div class="box6 b65"></div>
+        <div class="box6 b66"></div>
+        <div class="box6 b67"></div>
+        <div class="box6 b68"></div>
+        <div class="box6 b69"></div>
+        <div class="box6 b610"></div>
+        <div class="box6 b611"></div>
+        <div class="box6 b612"></div>
+      </div>
+
+      <div class="p7">
+        <div class="box7 b71"></div>
+        <div class="box7 b72"></div>
+        <div class="box7 b73"></div>
+        <div class="box7 b74">
+          <div class="box71 b701"></div>
+          <div class="box71 b702"></div>
+          <div class="box71 b703"></div>
+        </div>
+      </div>
+
+      <div class="p8">
+        <div class="box81 b81"></div>
+        <div class="box82 b82"></div>
+        <div class="box83 b83"></div>
+        <div class="box84 b84"></div>
+        <div class="box85 b85"></div>
+        <div class="box86 b86"></div>
+        <div class="box87 b87"></div>
+        <div class="box88 b88"></div>
+        <div class="box89 b89"></div>
+      </div>
+
+      <div class="p9">
+        <div class="box91 b91"></div>
+        <div class="box92 b92"></div>
+        <div class="box93 b93"></div>
+        <div class="box94 b94"></div>
+        <div class="box95 b95"></div>
+      </div>
+    </div>
+  </body>
+</html>
